@@ -1,0 +1,46 @@
+<div ng-controller="MapController">
+<h1>Map</h1>
+
+    <!-- <input type='text' ng-model="search">
+    <button ng-click='findInMap(search)'>find</button> -->
+
+    <input class="form-control" placeholder="What are searching for?"
+       type="text" ng-model="search" ng-change="change()">
+
+
+
+       <select class="form-control" name="limit"
+              ng-model="limit"  ng-change="change()">
+        <option value="" ng-if="!limit">Select number of results</option>
+        <option value="6">6</option>
+        <option value="12">12</option>
+        <option value="18">18</option>
+      </select>
+
+
+      <select class="form-control" name="method"
+              ng-model="method"  ng-change="change()"> 
+        <option value="" ng-if="!method">Select API method</option>
+        <option value="translate">Search</option>
+        <option value="trending">Trending</option>
+      </select>
+
+      <!-- <button ng-click='findInGif'>find</button>  -->
+       
+<div id="map">
+
+<div ng-if="res" >
+  <div ng-repeat="gif in res" class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src={{gif.images.fixed_height.url}} alt="" />
+      <div class="caption">
+        
+        <a href= {{gif.url}} target="_blank">Open original Giphy detail</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<a href="#/translate">Translate Image<strong>Translate</strong> ...</a>
+</div>
+
