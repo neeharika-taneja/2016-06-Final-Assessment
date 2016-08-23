@@ -1,27 +1,21 @@
 <div ng-controller="MapController">
-<h1>Map</h1>
+<h1>Trends</h1>
 
     <!-- <input type='text' ng-model="search">
     <button ng-click='findInMap(search)'>find</button> -->
-
-    <input class="form-control" placeholder="What are searching for?"
+    <div>
+    <a href="#/translate"><strong>Click to go to the Translate page</strong> </a>
+	</div>
+    <input class="form-control" placeholder="Add something to see all trends "
        type="text" ng-model="search" ng-change="change()">
 
 
 
-       <select class="form-control" name="limit"
-              ng-model="limit"  ng-change="change()">
-        <option value="" ng-if="!limit">Select number of results</option>
-        <option value="6">6</option>
-        <option value="12">12</option>
-        <option value="18">18</option>
-      </select>
-
+       
 
       <select class="form-control" name="method"
               ng-model="method"  ng-change="change()"> 
         <option value="" ng-if="!method">Select API method</option>
-        <option value="translate">Search</option>
         <option value="trending">Trending</option>
       </select>
 
@@ -41,6 +35,6 @@
   </div>
 </div>
 </div>
-<a href="#/translate">Translate Image<strong>Translate</strong> ...</a>
+
 </div>
 

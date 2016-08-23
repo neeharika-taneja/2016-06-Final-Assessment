@@ -3,7 +3,7 @@ angular.module('shortly.map', [])
     console.log('in mapController');
 
     $scope.change = function(){
-    if($scope.search !== undefined && $scope.limit !== undefined && $scope.method !== undefined) {
+    if($scope.search !== undefined && $scope.method !== undefined) {
     $scope.findInGif();
   }
   };
